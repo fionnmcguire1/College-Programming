@@ -1,0 +1,216 @@
+
+<html>
+
+<head>
+<link rel="stylesheet" type ="text/css" href="stylesheet.css"  >
+
+</head>
+
+<body>
+
+<!--This is the header-->
+<table class = "banner_menu" border='0' >
+
+	<tr valign="top">
+		<td width="12%"></td>
+		<td width="76%" height = "14%" colspan='1' >
+			<a href="home.html"><img src = "images/dit_crest_2010.gif"></a>
+			<a href="home.html"><img src = "images/dit_logo_text.png"></a>
+		</td>
+		<td width="12%"></td>
+	</tr>
+</table>
+
+<table class="banner_menu" border="0">
+	<tr>
+		<td width="12%"></td>
+		<td class ="the_little_four" >
+			<div onclick="location.href='home.php'" style= "cursor:pointer;width:100%; height:100%;">
+				<h3>
+					<font class="button_font">Home</font>
+				</h3>
+			</div>
+		</td>
+		<td class ="the_little_four" >
+			<div onclick="location.href='records.php'" style= "cursor:pointer;width:100%; height:100%;">
+				<h3>
+					<font class="button_font">Records</font>
+				</h3>
+			</div>
+		</td>
+		<td class ="the_little_four" >
+			<div onclick="location.href='billing.php'" style= "cursor:pointer;width:100%; height:100%; ">
+				<h3>
+					<font class="button_font">Billings</font>
+				</h3>
+			</div>
+		</td>
+		<td class ="the_little_four" >
+			<div onclick="location.href='calendar.php'" style= "cursor:pointer;width:100%; height:100%; ">
+				<h3>
+					<font class="button_font">Calendar</font>
+				</h3>
+			</div>
+		</td>
+		<td class ="the_little_four" >
+			<div onclick="location.href='room_service.php'" style= "cursor:pointer;width:100%; height:100%; ">
+				<h3>
+					<font class="button_font">Room Service</font>
+				</h3>
+			</div>
+		</td>
+		<td width="12%"></td>
+	</tr>
+</table>
+
+
+
+<!--This is the end of the header-->
+
+<!--Calendar module-->
+
+
+<!--
+
+There needs to be php code here counting the days of that month
+then that becomes the range in a for loop which prints a td every day
+and every 7 days prints a new tr. the i int he for loop is the day
+this obviously requires a date function
+
+put the year up beside the month
+
+from there i need to retrieve the inspection dates and if inspection date= yy-mm-i
+print an blue dot + "Room inspection in room $room_no"
+
+Aesthetics
+Make the current day orange
+better font for the numbers possibly
+make the area that has april a full orange bar with the check boxes in it
+figure out why the month is positioned in the cell the way it is
+
+
+For further points implement a check box to include other elements in this mysql code
+such as including room service requests, violation dates and eviction dates
+from here try to add different colors for different sections i.e violations = red
+then make the td clickable, this turns to a pop-up menu giving a clearer view of the
+events on that day similar to adding a task in teamwork
+
+if you click the buttons they dont unclick
+the button to the left is valigned top
+
+also http://www.w3schools.com/html/html_forms.asp
+finish the form so it returns all the right crap
+
+
+-->
+
+<table width="100%" height="66%">
+<tr>
+	<td width="12%"></td>
+	<td width="76%">
+	<form>
+		<table class="calendar_title_row" border="0" >
+
+			<tr height="100%">
+			<td class="calendar_title" style="vertical-align:center;">
+				
+				Room Inspections  <input type="checkbox" name="room_inspection" value="room_inspection" checked>
+			</td>
+			<td class="calendar_title">
+				Room Service Requests  <input type="checkbox" name="room_service_requests" value="room_service_requests">
+			</td>
+			<td class="calendar_title">
+				Violations  <input type="checkbox" name="violations" value="violations">
+			</td>
+			<td class="calendar_title">
+				Evictions  <input type="checkbox" name="evictions" value="evictions">
+			</td>
+			<td class="calendar_title">
+				<font size = 5>April 2015</font>
+			</td>
+
+			</tr>
+
+		</table>
+		</form>
+		<table class="calendar_table" border="0" style="border-top: solid #0063b1; border-collapse:collapse;">
+		<tr class="calendar_tr" valign="top">
+		<td class="calendar_td" style="border-left: solid #0063b1;">1</td>
+		<td class="calendar_td">2</td>
+		<td class="calendar_td">3</td>
+		<td class="calendar_td">4</td>
+		<td class="calendar_td">5</td>
+		<td class="calendar_td">6</td>
+		<td class="calendar_td">7</td>
+		</tr>
+		<tr class="calendar_tr" valign="top">
+		<td class="calendar_td" style="border-left: solid #0063b1;">8</td>
+		<td class="calendar_td">9</td>
+		<td class="calendar_td">10</td>
+		<td class="calendar_td">11</td>
+		<td class="calendar_td">12</td>
+		<td class="calendar_td">13</td>
+		<td class="calendar_td">14</td>
+		</tr>
+		<tr class="calendar_tr" valign="top">
+		<td class="calendar_td" style="border-left: solid #0063b1;">15</td>
+		<td class="calendar_td">16</td>
+		<td class="calendar_td">17</td>
+		<td class="calendar_td">18</td>
+		<td class="calendar_td">19</td>
+		<td class="calendar_td">20</td>
+		<td class="calendar_td">21</td>
+		</tr>
+		<tr class="calendar_tr" valign="top">
+		<td class="calendar_td" style="border-left: solid #0063b1;">22</td>
+		<td class="calendar_td">23</td>
+		<td class="calendar_td">24</td>
+		<td class="calendar_td">25</td>
+		<td class="calendar_td">26</td>
+		<td class="calendar_td">27</td>
+		<td class="calendar_td">28</td>
+		</tr>
+		<tr class="calendar_tr" valign="top">
+		<td class="calendar_td" style="border-left: solid #0063b1;">29</td>
+		<td class="calendar_td">30</td>
+		<td class="calendar_td">31</td>
+
+		</tr>
+
+		
+		</table>
+	</td>
+	<td width="12%"></td>
+</tr>
+</table>
+
+
+
+
+
+
+
+<!-- This is the footer-->
+<footer>
+<table class="footer_table" border='0'>
+	<tr>
+		<td width="12%"></td>
+		<td>
+		<table class="mini_footer_table">
+		<tr>
+			<td class="footer"><a style="hover-color:#ffcc33"href="home.html"><font class="button_font">Home</font></a></td>	
+			<td class="footer"><font class="button_font">Helpline No: 01 402 3000</font></td>
+			<td class="footer"><a href="http://mydit.ie/mydit.ie/"><font class="button_font">Staff Email</font></a></td> 
+			<td class="footer"><a href="www.dit.ie"><font class="button_font">DIT Website</font></a></td>
+		</tr>
+		</table>
+		<td>
+		<td width="12%"></td>
+	</tr>
+</table>
+</footer>
+
+
+</body>
+
+</html>
