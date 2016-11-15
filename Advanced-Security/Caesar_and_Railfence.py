@@ -21,7 +21,7 @@ def encrypt(p,k):
     return caesar(p,k)
 def decrypt(c,k):
     return caesar(c,k,True)
-    return c[pos.index(k)] for k in rng
+    
 
 def fence(p,k):
     fence = [[None] * len(p) for n in range(k)]
