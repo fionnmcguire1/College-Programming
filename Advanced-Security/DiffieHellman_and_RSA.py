@@ -33,4 +33,26 @@ print("Bob Enhanced Key: %s" % bob_enhanced_secret_integer)
 print("Alice Secret Key: %s" % alice_key)
 print("Bob Secret Key: %s" %bob_key)
 
+#2 RSA Encryption
 
+from Crypto.PublicKey import RSA
+from Crypto.Util import asn1
+from base64 import b64decode
+
+
+
+key = RSA.generate(2048)
+
+binPrivKey = key.exportKey('DER')
+binPubKey =  key.publickey().exportKey('DER')
+
+privKeyObj = RSA.importKey(binPrivKey)
+pubKeyObj =  RSA.importKey(binPubKey)
+
+msg = "hello my name is fionn"
+emsg = pubKeyObj.encrypt(msg, 'x')[0]
+dmsg = privKeyObj.decrypt(emsg)
+print(msg)
+print(emsg.encode('hex'))
+print(dmsg)
+assert(msg == dmsg)
