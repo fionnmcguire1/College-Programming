@@ -1,0 +1,5 @@
+This is me trying to show you that i can encrypt text files. I can also decrypt text files. I can also use symbols. In college
+i study two subjects which, coinside with each-other. Maths & Security. In maths i have to master
+various symbols and operations. Modulous % and Arithmetic (- + * / =); However the security module that
+which i am studying it is important to be able to encrypt and decrypt various symbols should they
+be used in a message by the client. These include {}[] ! @ $ " ' : < >
